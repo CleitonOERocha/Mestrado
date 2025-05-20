@@ -49,12 +49,12 @@ class Tratamento_Empresas_Punidas:
             self.df_empresas = None
 
             self.df_empresas = self.executar_tratamento_arquivos(df_inid, 
-                                                            df_punidas, 
-                                                            df_sem_fin_luc, 
-                                                            return_df = retornar_dataframe, 
-                                                            save_xlsx = salvar_xlsx,
-                                                            path_to_save = pasta_para_salvar)
-            
+                                                                 df_punidas, 
+                                                                 df_sem_fin_luc, 
+                                                                 return_df = retornar_dataframe, 
+                                                                 save_xlsx = salvar_xlsx,
+                                                                 path_to_save = pasta_para_salvar)
+                
     # Obter os arquivos mais recentes
     def obter_arquivos_recentes(self):
 
@@ -205,15 +205,3 @@ class Tratamento_Empresas_Punidas:
         elif save_xlsx is False and path_to_save is None and return_df is False:
 
             print("Use 'save_xlsx = True' para salvar o arquivo ou 'return_df = True' para obter o dataframe.")
-
-###################################################################
-#### Execução -----------------------------------------------------
-###################################################################
-
-# Exemplo 1
-tep  = Tratamento_Empresas_Punidas(retornar_dataframe=True, salvar_xlsx=False, pasta_para_salvar=None)
-df  = tep.df_empresas       
-
-# Exemplo 2
-Tratamento_Empresas_Punidas(retornar_dataframe=False, salvar_xlsx=True, pasta_para_salvar=None)
-

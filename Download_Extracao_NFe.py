@@ -13,12 +13,12 @@ import shutil
 class Download_Extracao_NFe:
 
     '''
-    Informe o ano e o mês que deseja fazer o download.
+    Informe o ano e o mês que deseja fazer o download. Use o formato str. Exemplo "202306".
 
     Exemplo de uso: Download_Extracao_NFe("202306")
     '''
 
-    def __init__(self, ano_mes):
+    def __init__(self, ano_mes:str):
 
         self.ano_mes = ano_mes
         self.baixar_nfe_zip(self.ano_mes)
@@ -75,12 +75,3 @@ class Download_Extracao_NFe:
         os.remove(nome_arquivo_zip)
 
         shutil.rmtree(pasta_extracao)
-
-
-###################################################################
-#### Execução -----------------------------------------------------
-###################################################################
-
-# Exemplo
-Download_Extracao_NFe("202306")
-

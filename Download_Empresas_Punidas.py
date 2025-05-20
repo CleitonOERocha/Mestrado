@@ -199,11 +199,3 @@ class Download_Extracao_Empresas_Punidas:
         self.descompactar_zip(nm_file_ceis, "CEIS")
         self.descompactar_zip(nm_file_cnep, "CNEP")
         self.descompactar_zip(nm_file_cepim, "CEPIM")
-
-
-###################################################################
-#### Execução -----------------------------------------------------
-###################################################################
-
-# Exemplo
-Download_Extracao_Empresas_Punidas()
