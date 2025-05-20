@@ -23,16 +23,16 @@ class Tratamento_NFe:
     * ano = Ano que deseja gerar o arquivo. Usar no formato str. Exemplo "2024", "2023", etc.
     * arquivo_empresas = Nome do arquivo gerado no código Tratamento_Empresas_Punidas.py.
     * retornar_dataframe = True/False. Use para retornar o dataframe no ambiente de execução.
-    * salvar_xlsx = True/False. Use para salvar o dataframe gerado em um arquivo xlsx.
+    * save_parquet = True/False. Use para salvar o dataframe gerado em um arquivo Parquet.
     * pasta_para_salvar = None / Pasta desejada. Use 'None' para salvar o xlsx na pasta de execução do código ou \
                           passe um caminho para a pasta que deseja salvar o arquivo.
 
     Exemplo:
 
-    * Executando e gerando um arquivo xlsx na pasta de execução do código:<br />
+    * Executando e gerando um arquivo parquet na pasta de execução do código:<br />
     Tratamento_NFe("2024", "empresas_punidas.xlsx", retornar_dataframe=False, save_parquet=True, pasta_para_salvar=None)<br />
     <br />
-    * Executando e gerando somente o dataframe no ambiente de execução (sem gerar xlsx):<br />
+    * Executando e gerando somente o dataframe no ambiente de execução (sem gerar parquet):<br />
     tnfe  = Tratamento_NFe("2024", "empresas_punidas.xlsx", retornar_dataframe=True, save_parquet=False, pasta_para_salvar=None)<br />
     df  = tnfe.df_nfe       
 
